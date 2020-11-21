@@ -27,9 +27,7 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
 
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript" src="javascript/javascript_base.js"></script>
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,6 +35,8 @@
 
 </head>
 <body>
+
+
   <!-- Navbar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -55,22 +55,67 @@
 	  <div class="bigseparator"></div>
     <div class="bigseparator"></div>
     <div class="bigseparator"></div>
-	  <a href="#news">Home</a>
 
-    <a class="dropdown-btn">Dropdown
+    <!-- déco/maison -->
+    <a class="dropdown-btn">déco / maison
       <i class="fa fa-caret-down"></i>
     </a>
 
     <div class="dropdown-container">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="#">couronnes de fleurs</a>
+      <a href="#">coussins</a>
+      <a href="#">tote bag</a>
+      <a href="#">sac à linge</a>
+      <a href="#">pochettes</a>
+    </div>
+
+    <!-- cuisine -->
+    <a class="dropdown-btn">cuisine
+      <i class="fa fa-caret-down"></i>
+    </a>
+
+    <div class="dropdown-container">
+      <a href="#">charlottes alimentaires</a>
+      <a href="#">serviettes de table</a>
     </div>
 
 
-	  <a href="#contact">Chouchous</a>
-	  <a href="#about">Masques</a>
-	  <a href="#about">Bavoirs</a>
+    <!-- cuisine -->
+    <a class="dropdown-btn">bébé/enfant
+      <i class="fa fa-caret-down"></i>
+    </a>
+
+    <div class="dropdown-container">
+      <a href="#">bavoirs</a>
+      <a href="#">sac à bébé</a>
+      <a href="#">cotons</a>
+    </div>
+
+    <!-- beauté/hygiène -->
+    <a class="dropdown-btn">beauté / hygiène
+      <i class="fa fa-caret-down"></i>
+    </a>
+
+    <div class="dropdown-container">
+      <a href="#">protège brosse à dent</a>
+      <a href="#">trousses de toilettes</a>
+      <a href="#">cotons</a>
+      <a href="#">chouchous</a>
+      <a href="#">masques</a>
+    </div>
+
+    <!-- vétements -->
+    <a class="dropdown-btn">vétements
+      <i class="fa fa-caret-down"></i>
+    </a>
+
+    <div class="dropdown-container">
+      <a href="#">berets</a>
+      <a href="#">t-shirt brodés</a>
+    </div>
+
+    <!-- autre -->
+	  <a href="#contact">divers</a>
 	  <a href="#about">A propos</a>
 	</div>
 
@@ -145,11 +190,6 @@
         </a>
       </p>
 
-      <p class="div_footer">
-        <a href="https://twitter.com/pawilloquaux" target="_blank">
-          <img class="rezize_image_footer" src="images/favicon.png" onmouseover="this.src=&quot;images/favicon.png&quot;" onmouseout="this.src=&quot;images/favicon.png&quot;">
-        </a>
-      </p>
 
       <p class="div_footer2">
         <a class="a_link" href="http://getskeleton.com/" target="_blank"> Webstite by Skeleaton </a><a>
@@ -159,6 +199,34 @@
       <div class="separator"></div>
 
   </a></footer>
+
+  <!-- Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+  //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+  }
+  </script>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
