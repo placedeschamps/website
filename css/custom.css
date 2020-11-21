@@ -60,11 +60,13 @@
   }
 }
 
-
+/***************/
 /* FIN NAVBAR */
-
+/***************/
 
 /* SIDEBAR */
+/*1 nav basique */
+
 .sidebar {
   margin: 0;
   padding: 0;
@@ -72,16 +74,28 @@
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
-  overflow: auto;
-  text-align: center;
+  overflow: hidden;
+  /*overflow: auto;*/
+  text-align: left;
   color:#065C6F;
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 
-.sidebar a {
+.sidebar a, .dropdown-btn {
   display: block;
   color: black;
   padding: 16px;
   text-decoration: none;
+
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
 
@@ -96,11 +110,16 @@
   color: white;
 }
 
-.container{
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+..dropdown-btn a.active {
+  background-color:#065C6F;
+  color: white;
 }
+
+.dropdown-btn a:hover:not(.active) {
+  background-color: #065C6F;
+  color: white;
+}
+
 
 
 @media screen and (max-width: 700px) {
@@ -122,7 +141,32 @@
   }
 }
 
+/*2 sub menu */
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #eeee;
+  padding-left: 1px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  /*float: right;*/
+  padding-left: 5px;
+}
+
+
+
+/***************/
 /* FIN SIDEBAR */
+/***************/
+
+.container{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
 
 
 /* MEDIA - IMAGES
@@ -139,7 +183,6 @@
   max-width: 200px;
   min-width: 75px;
   height: auto;
-
 }
 
 .rezize_image {
@@ -170,8 +213,20 @@
 
 @media screen and (max-width: 700px) {
   .bigseparator {
+      height: 30px;
+}
+}
+
+.bigseparator2{
+    height: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .bigseparator2 {
       height: 15px;
 }
+}
+
 
 .mini_separator{
   line-height : 1px;
@@ -187,7 +242,7 @@
     }
 
 .prix {
-  color:#FFBB91;
+  color:#065C6F;
   text-align: center;
 
 }
@@ -208,6 +263,8 @@
     font-size: 35px;
     white-space: pre;
 }
+}
+
 
 @media screen and (max-width: 400px) {
   .espacement_h1 {
@@ -215,15 +272,18 @@
     font-size: 25px;
     white-space: pre;
 }
+}
+
 
 .espacement_h6{
 	margin-bottom:0.1rem;
   text-align: center;
+  color:#065C6F;
 }
 
 .espacement_h4{
 	margin-bottom:0.1rem;
-  text-align: center;
+  text-align: left;
   color:#065C6F;
 }
 
@@ -253,7 +313,6 @@ text-align: center;
 bottom: 0;
 height: 100px;
 left: 0;
-margin-left: 200px;
 }
 
 .div_footer{
