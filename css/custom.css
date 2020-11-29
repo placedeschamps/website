@@ -256,10 +256,11 @@
 .container
 {
 	margin-top: 1rem;
-	left: 200px;
-	margin-right: 20%;
+	/*left: 200px;
+	margin-right: 20%;*/
 	position: relative;
 	width: 100%;
+	padding-left: 200px;
 }
 
 @media screen and (max-width: 750px)
@@ -271,8 +272,10 @@
 		width: 100%;
 		margin:auto;
 		left: 0px;
-		margin-right: 0%;
+		padding-left:  : 0px;
+		/*margin-right: 0%;*/
 	}
+
 
 }
 
